@@ -1,0 +1,22 @@
+# =========================
+# Terraform
+# =========================
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+
+# Variáveis sensíveis
+terraform/*.tfvars
+
+# =========================
+# Chaves
+# =========================
+*.pem
+*.pub
+
+# =========================
+# Editor / SO
+# =========================
+.vscode/
+.DS_Store
