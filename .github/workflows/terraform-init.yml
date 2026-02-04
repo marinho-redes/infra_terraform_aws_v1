@@ -1,0 +1,20 @@
+name: Terraform Init
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+jobs:
+  init:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Init
+        run: terraform init
+        working-directory: terraform
+
