@@ -1,7 +1,11 @@
-name: Terraform Destroy
+name: Terraform Destroy (Manual)
 
 on:
   workflow_dispatch:
+    inputs:
+      confirm_destroy:
+        description: "Digite DESTROY para confirmar"
+        required: true
 
 jobs:
   destroy:
@@ -9,8 +13,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
       - uses: hashicorp/setup-terraform@v3
+
+      - name: Check confirmation
+        run: |
+          if [ "${{ github.event.inputs.confirm_destroy }}" != "DESTROY" ]; then
+            echo "Confirmação inválida"
+            exit 1
+          fi
 
       - name: Terraform Init
         run: terraform init

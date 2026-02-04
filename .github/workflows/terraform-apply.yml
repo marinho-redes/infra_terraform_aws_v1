@@ -1,7 +1,16 @@
-name: Terraform Apply
+name: Terraform Apply (Manual)
 
 on:
   workflow_dispatch:
+    inputs:
+      environment:
+        description: "Ambiente"
+        required: true
+        default: "dev"
+        type: choice
+        options:
+          - dev
+          - prod
 
 jobs:
   apply:
