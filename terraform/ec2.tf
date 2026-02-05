@@ -27,7 +27,7 @@ resource "aws_instance" "web" {
   tags = {
     Name       = "devops-web"
     Project    = "Projeto DevOps10"
-    Owner      = "Raul Marinho"
+    Owner      = "Raul Marinho1"
     Enviroment = "dev"
   }
 }
