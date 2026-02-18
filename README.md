@@ -146,18 +146,6 @@ terraform destroy
 
 ---
 
-## Possíveis Evoluções do Projeto
-
-Este projeto foi estruturado para permitir evolução gradual, simulando crescimento de maturidade DevOps.
-
-* Backend remoto com S3 e DynamoDB para controle de state
-* Separação por ambientes (dev, stage, prod)
-* Uso de módulos Terraform
-* Autenticação AWS via OIDC (sem Access Keys)
-* Geração de diagramas de arquitetura
-
----
-
 ## Autor
 
 Raul Marinho
